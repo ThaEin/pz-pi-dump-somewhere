@@ -1,5 +1,5 @@
 version=1
-id=
+id=3823274526
 title=Proximity Inventory Dump Somewhere
 description=Allows you to drop items into nearby containers via Proximity Inventory tab
 description=
