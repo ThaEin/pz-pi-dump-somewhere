@@ -1,4 +1,9 @@
 name=Proximity Inventory Dump Somewhere
 id=ProximityInventoryDumpSomewhere
-description=Proximity Inventory Dump Somewhere
+modversion=1.0.0
+author=ThaEin
+description=Allows dumping items into nearby containers via Proximity Inventory tab
 poster=poster.png
+icon=icon.png
+require=ProximityInventory
+loadModAfter=ProximityInventory

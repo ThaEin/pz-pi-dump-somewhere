@@ -1,5 +1,8 @@
 version=1
+id=
 title=Proximity Inventory Dump Somewhere
-description=This is an example mod with two worlds.  You can use this as a template for your own map mods.
-tags=
-visibility=public
+description=Allows you to drop items into nearby containers via Proximity Inventory tab
+description=
+description=source: https://github.com/ThaEin/pz-pi-dump-somewhere
+tags=Build 42;Balance;Building;Interface;Items;Misc;Multiplayer;QoL
+visibility=friendsOnly

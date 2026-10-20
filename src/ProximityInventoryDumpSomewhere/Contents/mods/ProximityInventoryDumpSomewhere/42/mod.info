@@ -1,4 +1,10 @@
 name=Proximity Inventory Dump Somewhere
 id=ProximityInventoryDumpSomewhere
-description=Proximity Inventory Dump Somewhere
-poster=poster.png
+modversion=1.0.0
+author=ThaEin
+description=Allows dumping items into nearby containers via the Proximity Inventory tab
+url=https://github.com/ThaEin/pz-pi-dump-somewhere
+poster=../poster.png
+icon=../icon.png
+require=ProximityInventory
+loadModAfter=ProximityInventory
