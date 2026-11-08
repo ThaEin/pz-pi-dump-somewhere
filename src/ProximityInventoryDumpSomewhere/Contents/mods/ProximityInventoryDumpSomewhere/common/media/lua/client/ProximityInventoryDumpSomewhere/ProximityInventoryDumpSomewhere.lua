@@ -25,7 +25,14 @@ end
 
 function ProximityInventoryDumpSomewhere:isInventoryAllowed(inv)
   local invType = inv:getType()
-  return invType ~= "proxInv" and invType ~= "local" and invType ~= "floor"
+  if invType == "proxInv" or invType == "local" or invType == "floor" then
+    return false
+  end
+  local obj = inv:getParent()
+  if obj and obj:getSprite() and obj:getSprite():getProperties() and obj:getSprite():getProperties():has("IsTrashCan") then
+    return false
+  end
+  return true
 end
 
 
@@ -83,9 +90,6 @@ function ProximityInventoryDumpSomewhere:dropSomewhere(inventoryPane, invs, item
 
   local transfered = false;
   for _, item in ipairs(items) do
-    if hasRoomFor then
-      break
-    end
     
     if not item:isFavorite() then
       for invInd, inv in ipairs(availableInvs) do
