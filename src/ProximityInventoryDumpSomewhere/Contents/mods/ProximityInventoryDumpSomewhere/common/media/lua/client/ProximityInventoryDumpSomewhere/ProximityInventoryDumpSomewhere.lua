@@ -7,6 +7,8 @@ ProximityInventoryDumpSomewhere = ProximityInventoryDumpSomewhere or {};
 ProximityInventoryDumpSomewhere.Orig = ProximityInventoryDumpSomewhere.Orig or {};
 local Orig = ProximityInventoryDumpSomewhere.Orig;
 
+local settings = require('ProximityInventoryDumpSomewhere/settings.lua');
+
 -- Checks whether item can be dropped into at least one of given containers that is not virtual and not floor
 ---@param containers any
 ---@param item any
@@ -28,9 +30,11 @@ function ProximityInventoryDumpSomewhere:isInventoryAllowed(inv)
   if invType == "proxInv" or invType == "local" or invType == "floor" then
     return false
   end
-  local obj = inv:getParent()
-  if obj and obj:getSprite() and obj:getSprite():getProperties() and obj:getSprite():getProperties():has("IsTrashCan") then
-    return false
+  if settings:isExcludeTrashCans() then
+    local obj = inv:getParent()
+    if obj and obj:getSprite() and obj:getSprite():getProperties() and obj:getSprite():getProperties():has("IsTrashCan") then
+      return false
+    end
   end
   return true
 end
