@@ -1,6 +1,6 @@
 name=Proximity Inventory Dump Somewhere
 id=ProximityInventoryDumpSomewhere
-modversion=1.0.0
+modversion=1.0.1
 author=ThaEin
 description=Allows dumping items into nearby containers via the Proximity Inventory tab
 url=https://github.com/ThaEin/pz-pi-dump-somewhere
